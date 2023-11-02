@@ -18,15 +18,14 @@
 
             <!-- Navigation Links -->
             <div class="space-x-4 hidden md:flex">
-                <button href="#" class="text-white hover:border-t-2 border-white hover:border-b-2 border-black transition ease-in-out delay-150">Home</button>
-                <button href="#" class="text-white hover:border-t-2 border-white hover:border-b-2 border-black transition ease-in-out delay-150"><a href="bmi.html">BMI Calculator</a></button>
-                <button href="#" class="text-white hover:border-t-2 border-white hover:border-b-2 border-black transition ease-in-out delay-150">Calorie calculator</button>
-                <button href="#" class="text-white hover:border-t-2 border-white hover:border-b-2 border-black transition ease-in-out delay-150">Programs</button>
-                <input class="pl-1 rounded-lg " type="text" name="search" id="search" placeholder="Search">
+                <button href="#" class="text-white hover:border-t-2 border-white hover:border-b-2 border-black transition ease-in-out delayed-text opacity-0">Home</button>
+                <button href="#" class="text-white hover:border-t-2 border-white hover:border-b-2 border-black transition ease-in-out delayed-text opacity-0"><a href="bmi.html">BMI Calculator</a></button>
+                <button href="#" class="text-white hover:border-t-2 border-white hover:border-b-2 border-black transition ease-in-out delayed-text opacity-0">Calorie calculator</button>
+                <button href="#" class="text-white hover:border-t-2 border-white hover:border-b-2 border-black transition ease-in-out delayed-text opacity-0">Programs</button>
             </div>
         </div>
     </nav>
-    <The class="p-8 text-5xl font-semibold text-center opacity-0 delayed-text text-white">If You Cannot Find a Way <span class="text-blue">Create</span> One</p>
+    <The class=" flex justify-center py-2 text-5xl font-semibold text-center opacity-0 delayed-text text-white">If You Cannot Find a Way <span class="text-blue">Create</span> One</p>
     <!-- <i class="text-3xl mt-25 ml-5 opacity-0 delayed-text text-white float-right"  >Sweat now, shine later...</i> <br> -->
 
     <script>
@@ -38,7 +37,7 @@
                 element.style.transition = "opacity 1s ease-in-out";
                 setTimeout(function () {
                     element.style.opacity = "1";
-                }, 2000 * (index + 1)); // Adjust the delay time for each text
+                }, 1000 * (index + 1)); // Adjust the delay time for each text
             });
         }
     

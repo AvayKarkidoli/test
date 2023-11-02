@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+
+    <div class="bg-white p-8 rounded-lg shadow-md w-80">
+        <h2 class="text-2xl font-bold mb-4">Calorie Calculator</h2>
+
+        <div class="mb-4">
+            <label for="weight" class="block text-sm font-medium text-gray-600">Weight (kg):</label>
+            <input type="number" id="weight" class="mt-1 p-2 border rounded-md w-full" placeholder="Enter weight">
+        </div>
+
+        <div class="mb-4">
+            <label for="activityLevel" class="block text-sm font-medium text-gray-600">Activity Level:</label>
+            <select id="activityLevel" class="mt-1 p-2 border rounded-md w-full">
+                <option value="1.2">Sedentary (little or no exercise)</option>
+                <option value="1.375">Lightly active (light exercise/sports 1-3 days/week)</option>
+                <option value="1.55">Moderately active (moderate exercise/sports 3-5 days/week)</option>
+                <option value="1.725">Very active (hard exercise/sports 6-7 days a week)</option>
+                <option value="1.9">Extra active (very hard exercise/sports & physical job or 2x training)</option>
+            </select>
+        </div>
+
+        <button onclick="calorieCalculate()" class="bg-blue-500 text-white px-4 py-2 rounded-md">Calculate Calories</button>
+
+        <div class="mt-4" id="result"></div>
+    </div>
+
+    <script>
+        function calorieCalculate() {
+            let weight = parseFloat(document.getElementById('weight').value);
+            let activityLevel = parseFloat(document.getElementById('activityLevel').value);
+
+            if (isNaN(weight) || isNaN(activityLevel) || weight <= 0) {
+                document.getElementById('result').innerHTML = '<p class="text-red-500">Please enter valid values for weight and activity level.</p>';
+                return;
+            }
+
+            var calories = weight * activityLevel * 24; // Basal Metabolic Rate (BMR) calculation
+
+            var resultText = '<p class="text-green-500">Your estimated daily calories: ' + calories.toFixed(2) + ' kcal</p>';
+
+            document.getElementById('result').innerHTML = resultText;
+        }
+    </script>
+</body>
+</html>
