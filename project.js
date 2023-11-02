@@ -1,14 +1,14 @@
 function calculateBMI() {
-    var height = parseFloat(document.getElementById('height').value);
-    var weight = parseFloat(document.getElementById('weight').value);
+    let height = parseFloat(document.getElementById('height').value);
+    let weight = parseFloat(document.getElementById('weight').value);
 
     if (isNaN(height) || isNaN(weight) || height <= 0 || weight <= 0) {
         document.getElementById('result').innerHTML = '<p class="text-red-500">Please enter valid values for height and weight.</p>';
         return;
     }
 
-    var bmi = weight / ((height / 100) * (height / 100));
-    var category = '';
+    let bmi = weight / ((height / 100) * (height / 100));
+    let category = '';
 
     if (bmi < 18.5) {
         category = 'Underweight';
@@ -19,7 +19,7 @@ function calculateBMI() {
     } else {
         category = 'Obese';
     }
-    var resultText = '<p class="text-green-500">Your BMI is ' + bmi.toFixed(2) + '</p>';
+    let resultText = '<p class="text-green-500">Your BMI is ' + bmi.toFixed(2) + '</p>';
 resultText += '<p class="mt-2">Category: ' + category + '</p>';
 
     document.getElementById('result').innerHTML = resultText;
@@ -29,13 +29,13 @@ resultText += '<p class="mt-2">Category: ' + category + '</p>';
 
 // Function to delay the appearance of text
 function delayText() {
-    var elements = document.querySelectorAll(".delayed-text");
+    let elements = document.querySelectorAll(".delayed-text");
 
     elements.forEach(function (element, index) {
         element.style.transition = "opacity 1s ease-in-out";
         setTimeout(function () {
             element.style.opacity = "1";
-        }, 1000 * (index + 1)); // Adjust the delay time for each text
+        }, 500 * (index + 1)); // Adjust the delay time for each text
     });
 }
 
@@ -51,9 +51,9 @@ function calorieCalculate() {
         return;
     }
 
-    var calories = weight * activityLevel * 24; // Basal Metabolic Rate (BMR) calculation
+    let calories = weight * activityLevel * 24; // Basal Metabolic Rate (BMR) calculation
 
-    var resultText = '<p class="text-green-500">Your estimated daily calories: ' + calories.toFixed(2) + ' kcal</p>';
+    let resultText = '<p class="text-green-500">Your estimated daily calories: ' + calories.toFixed(2) + ' kcal</p>';
 
     document.getElementById('result').innerHTML = resultText;
 }
