@@ -35,9 +35,25 @@ function delayText() {
         element.style.transition = "opacity 1s ease-in-out";
         setTimeout(function () {
             element.style.opacity = "1";
-        }, 2000 * (index + 1)); // Adjust the delay time for each text
+        }, 1000 * (index + 1)); // Adjust the delay time for each text
     });
 }
 
 // Call the delayText function when the page is loaded
 window.onload = delayText;
+
+function calorieCalculate() {
+    let weight = parseFloat(document.getElementById('weight').value);
+    let activityLevel = parseFloat(document.getElementById('activityLevel').value);
+
+    if (isNaN(weight) || isNaN(activityLevel) || weight <= 0) {
+        document.getElementById('result').innerHTML = '<p class="text-red-500">Please enter valid values for weight and activity level.</p>';
+        return;
+    }
+
+    var calories = weight * activityLevel * 24; // Basal Metabolic Rate (BMR) calculation
+
+    var resultText = '<p class="text-green-500">Your estimated daily calories: ' + calories.toFixed(2) + ' kcal</p>';
+
+    document.getElementById('result').innerHTML = resultText;
+}

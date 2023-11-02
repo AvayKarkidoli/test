@@ -1,51 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Landing Page</title>
+    <title>My fItnEss</title>
 </head>
-<body class="bg-gray-50">
-<div class="w-full h-screen bg-cover bg-no-repeat"
-    style="background-image: url('image/home.jpg')">
-    <!-- Navigation Bar -->
-    <nav class="p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <!-- Logo -->
-            <a href="#" class="text-white text-lg font-bold">My fItnEss..</a>
-            <!-- <button class="text-white hover:border-y-2">Create account</button> -->
 
-            <!-- Navigation Links -->
-            <div class="space-x-4 hidden md:flex">
-                <button href="#" class="text-white hover:border-t-2 border-white hover:border-b-2 border-black transition ease-in-out delayed-text opacity-0">Home</button>
-                <button href="#" class="text-white hover:border-t-2 border-white hover:border-b-2 border-black transition ease-in-out delayed-text opacity-0"><a href="bmi.html">BMI Calculator</a></button>
-                <button href="#" class="text-white hover:border-t-2 border-white hover:border-b-2 border-black transition ease-in-out delayed-text opacity-0">Calorie calculator</button>
-                <button href="#" class="text-white hover:border-t-2 border-white hover:border-b-2 border-black transition ease-in-out delayed-text opacity-0">Programs</button>
+<body class="bg-black">
+    <div class="w-full h-screen bg-cover bg-no-repeat" style="background-image: url('image/home.jpg')">
+        <!-- Navigation Bar -->
+        <nav class="p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <!-- Logo -->
+                <a href="#" class="text-white text-lg font-bold">My fItnEss..</a>
+                <!-- <button class="text-white hover:border-y-2">Create account</button> -->
+
+                <!-- Navigation Links -->
+                <div class="space-x-4 hidden md:flex">
+                    <button href="#"
+                        class="text-white hover:border-t-2 border-white hover:border-b-2 border-black transition ease-in-out delayed-text opacity-0">Home</button>
+                    <button href="#"
+                        class="text-white hover:border-t-2 border-white hover:border-b-2 border-black transition ease-in-out delayed-text opacity-0"><a
+                            href="bmi.html">BMI Calculator</a></button>
+                    <button href="#"
+                        class="text-white hover:border-t-2 border-white hover:border-b-2 border-black transition ease-in-out delayed-text opacity-0"><a href="calorie cal.html">Calorie counter
+</a></button>
+                    <button href="#"
+                        class="text-white hover:border-t-2 border-white hover:border-b-2 border-black transition ease-in-out delayed-text opacity-0">Exercise</button>
+                </div>
             </div>
-        </div>
-    </nav>
-    <The class=" flex justify-center py-2 text-5xl font-semibold text-center opacity-0 delayed-text text-white">If You Cannot Find a Way <span class="text-blue">Create</span> One</p>
-    <!-- <i class="text-3xl mt-25 ml-5 opacity-0 delayed-text text-white float-right"  >Sweat now, shine later...</i> <br> -->
+        </nav>
+        <The class="flex justify-center py-2 text-5xl font-semibold text-center opacity-0 delayed-text text-white">If You Cannot Find a Way One</p>
+            <!-- <i class="text-3xl mt-25 ml-5 opacity-0 delayed-text text-white float-right"  >Sweat now, shine later...</i> <br> -->
 
-    <script>
-        // Function to delay the appearance of text
-        function delayText() {
-            var elements = document.querySelectorAll(".delayed-text");
+            <script src="project.js"></script>
+    </div>
+    <div class="cards-section gap-5 mt-8 mx-5 text-white flex  ">
+        
+            <div class="yoga-card border rounded-lg w-[33%] h-80 cursor-pointer flex ">
+                <a href="./pages/yoga.html" class="block ">
+                
+                    <h1 class="text-white text-3xl ml-3">Yoga</h1>
+                    <div class="card-container flex">
+                    <div class="mt-3 mx-3 ">
+                        <img src="https://images.news18.com/ibnlive/uploads/2022/09/yoga-2.jpg" alt="">
+                    </div>
+                    <p>
+                        Yoga is essentially a spiritual discipline based on an extremely subtle science, which focuses on bringing harmony between mind and body. It is an art and scince of healthy living. The word 'Yoga' is derived from the Sanskrit root 'Yuj', meaning 'to join' or 'to yoke' or 'to unite'.
+                    </p>
+                </div>
+                
+                </a>
+            </div>
+               
+
+       
+
     
-            elements.forEach(function (element, index) {
-                element.style.transition = "opacity 1s ease-in-out";
-                setTimeout(function () {
-                    element.style.opacity = "1";
-                }, 1000 * (index + 1)); // Adjust the delay time for each text
-            });
-        }
-    
-        // Call the delayText function when the page is loaded
-        window.onload = delayText;
-    </script>
-</div>
-<!-- <div class="h-80 min-h-full bg-black"></div> -->
+    <div class="yoga-card border rounded-lg w-[33%] h-80">
+        <h1 class="text-white text-3xl ml-3">Exercise</h1>
+    </div>
+    <div class="yoga-card border rounded-lg w-[33%] h-80">
+        <h1 class="text-white text-3xl ml-3">Cardio</h1>
+    </div>
+    </div>
+    <!-- <div class="h-80 min-h-full bg-black"></div> -->
+    <div style="height: 100vh;">
+
+    </div>
 </body>
 
 </html>
